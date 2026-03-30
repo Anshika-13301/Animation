@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAR HERO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-black to-slate-900 overflow-x-hidden">
+  <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <div class="hero-headline absolute top-20 left-1/2 -translate-x-1/2 z-30 text-center">
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-[1.2em] 
+                  bg-gradient-to-r from-blue-400 via-purple-500 to-emerald-500 bg-clip-text text-transparent 
+                  font-[Orbitron] mb-[-30px]">
+        WELCOME
+      </h1>
+      <h2 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[1em] 
+                 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500 bg-clip-text text-transparent 
+                 font-[Orbitron]">
+        ITZ FIZZ
+      </h2>
+    </div>
+    <div class="stats-grid absolute bottom-32 w-full z-20 px-4 md:px-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
+        <div class="stat-item text-center group cursor-default">
+          <div class="stat-counter text-6xl md:text-7xl lg:text-8xl font-black 
+                      bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent 
+                      mb-6 group-hover:scale-110 transition-transform duration-500" 
+                      data-target="98">0</div>
+          <div class="stat-label text-lg md:text-xl font-semibold uppercase tracking-widest 
+                      text-white/80 group-hover:text-white transition-colors duration-500">
+            Customer<br><span class="text-blue-400">Satisfaction</span>
+          </div>
+        </div>
+
+        <div class="stat-item text-center group cursor-default">
+          <div class="stat-counter text-6xl md:text-7xl lg:text-8xl font-black 
+                      bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent 
+                      mb-6 group-hover:scale-110 transition-transform duration-500" 
+                      data-target="52K">0</div>
+          <div class="stat-label text-lg md:text-xl font-semibold uppercase tracking-widest 
+                      text-white/80 group-hover:text-white transition-colors duration-500">
+            Happy<br><span class="text-emerald-400">Customers</span>
+          </div>
+        </div>
+
+        <div class="stat-item text-center group cursor-default">
+          <div class="stat-counter text-6xl md:text-7xl lg:text-8xl font-black 
+                      bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent 
+                      mb-6 group-hover:scale-110 transition-transform duration-500" 
+                      data-target="99.9">0</div>
+          <div class="stat-label text-lg md:text-xl font-semibold uppercase tracking-widest 
+                      text-white/80 group-hover:text-white transition-colors duration-500">
+            Uptime<br><span class="text-purple-400">Guarantee</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="car-container absolute bottom-[-10%] left-1/2 transform -translate-x-1/2 
+                z-10 w-[80%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-4xl h-[60vh] md:h-[70vh]">
+      <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&auto=format&fit=crop&q=80" 
+           alt="Luxury Sports Car" class="car-img-primary absolute inset-0 w-full h-full object-contain 
+           filter brightness-110 saturate-120 drop-shadow-[0_35px_60px_rgba(0,0,0,0.8)] 
+           animate-float hover:brightness-120 transition-all duration-500">
+
+      <img src="https://images.pexels.com/photos/1140820/pexels-photo-1140820.jpeg?w=800&auto=compress&cs=tinysrgb" 
+           alt="Backup Car" class="car-img-backup absolute inset-0 w-full h-full object-contain opacity-0">
+      <svg class="car-svg-fallback absolute inset-0 w-full h-full opacity-0" viewBox="0 0 400 250" fill="none">
+        <path d="M50 150 Q100 100 200 120 Q300 140 350 150 L370 180 L30 180 Z" 
+              fill="#3B82F6" stroke="#1E40AF" stroke-width="3"/>
+        <circle cx="80" cy="140" r="12" fill="#10B981"/>
+        <circle cx="320" cy="140" r="12" fill="#10B981"/>
+        <rect x="120" y="90" width="160" height="25" rx="12" fill="#1E293B" opacity="0.8"/>
+      </svg>
+
+    </div>
+    <div class="scroll-hint absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center">
+      <div class="scroll-box w-5 h-10 border-2 border-white/30 rounded-full flex items-center justify-center mb-3">
+        <div class="scroll-dot w-2 h-4 bg-gradient-to-b from-white to-white/50 rounded-full shadow-lg 
+                    animate-[bounce_2s_infinite]"></div>
+      </div>
+      <span class="text-white/50 uppercase tracking-[3px] font-medium text-xs">Scroll</span>
+    </div>
+
+  </section>
+
+  <section class="h-screen bg-gradient-to-b from-transparent via-slate-900/80 to-black flex items-center">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-7xl md:text-9xl font-black uppercase tracking-tight mb-12 
+                 bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+        Pure Scroll Magic ✨
+      </h2>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
